@@ -75,6 +75,5 @@ PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.cedric
 
 # Gapps
-GAPPS_VARIANT := pico
-$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 
