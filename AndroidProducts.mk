@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_cedric.mk
+    $(LOCAL_DIR)/havoc_cedric.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_cedric-user \
-    lineage_cedric-userdebug \
-    lineage_cedric-eng
+    havoc_cedric-user \
+    havoc_cedric-userdebug \
+    havoc_cedric-eng
