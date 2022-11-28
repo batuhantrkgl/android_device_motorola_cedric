@@ -77,3 +77,37 @@ PRODUCT_COPY_FILES += \
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.cedric
+
+# Optimizations 
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat64.enabled=false \
+    dalvik.vm.dex2oat-swap=false \
+    dalvik.vm.image-dex2oat-threads=4 \
+    dalvik.vm.image-dex2oat-cpu-set=0,1,2,3 \
+    dalvik.vm.dex2oat-threads=4 \
+    dalvik.vm.dex2oat-cpu-set=0,1,2,3 \
+    dalvik.vm.boot-dex2oat-threads=4 \
+    dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3 \
+    ro.sys.fw.dex2oat_thread_count=4
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.sf.disable_blurs=1 \
+    ro.sf.blurs_are_expensive=
+
+PRODUCT_DISABLE_SCUDO := true
+
+# IORap
+PRODUCT_PROPERTY_OVERRIDES += \
+    iorapd.readahead.enable=false \
+    iorapd.perfetto.enable=false \
+    ro.iorapd.enable=false
+    
+# Subsystem ramdump
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.ssr.enable_debug=0 \
+    persist.sys.ssr.enable_ramdumps=0
+    
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.am.reschedule_service=true \
+    ro.vendor.qti.sys.fw.bservice_enable=true

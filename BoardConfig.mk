@@ -22,6 +22,9 @@ TARGET_SCREEN_DENSITY := 420
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
+# SVELTE
+MALLOC_SVELTE := true
+
 # Kernel
 TARGET_KERNEL_CONFIG := cedric_defconfig
 TARGET_KERNEL_RECOVERY_CONFIG := cedric_recovery_defconfig
